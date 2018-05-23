@@ -19,13 +19,13 @@ export class LeafletMap extends Component {
           attribution='&copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* <Marker position={position}>
+        <Marker position={position}>
           <Popup>
             <span>
               A pretty CSS3 popup. <br /> Easily customizable.
             </span>
           </Popup>
-        </Marker> */}
+        </Marker>
       </Map>
     )
   }

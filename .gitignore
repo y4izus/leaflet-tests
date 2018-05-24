@@ -3,3 +3,4 @@ import-geojson/pk_ej.geojson
 .DS_Store
 
 react-leaflet/node_modules
+data

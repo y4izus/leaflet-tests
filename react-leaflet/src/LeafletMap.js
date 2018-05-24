@@ -1,14 +1,20 @@
 import React, { Component } from "react"
-import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import { Map, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet"
+import { ejes } from '../../data/ejes.geojson'
 
 export class LeafletMap extends Component {
   constructor() {
+    console.log(ejes.name)
     super()
     this.state = {
       lat: 40.4165,
       lng: -3.70256,
       zoom: 6
     }
+  }
+
+  getGeoJson(){
+    return ejes;
   }
 
   render() {
@@ -26,6 +32,7 @@ export class LeafletMap extends Component {
             </span>
           </Popup>
         </Marker>
+        <GeoJSON data={this.getGeoJson()}></GeoJSON>
       </Map>
     )
   }

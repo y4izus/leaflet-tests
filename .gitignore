@@ -4,4 +4,6 @@ import-geojson/pk_ej.geojson
 
 react-leaflet/node_modules
 react-openlayers/node_modules
+react-google-maps/node_modules
+
 data

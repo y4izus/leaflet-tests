@@ -7,7 +7,20 @@ function initMap() {
   })
 
   map.addListener('zoom_changed', function() {
-    console.log('Cambia el zoom')
+    const bounds = map.getBounds()
+    const NE = bounds.getNorthEast()
+    const SW = bounds.getSouthWest()
+
+    // North West
+    const NW = new google.maps.LatLng(NE.lat(),SW.lng())
+    // South East
+    const SE = new google.maps.LatLng(SW.lat(),NE.lng())
+    console.log('Bounds')
+    console.log('NW', `[${NW.lat()}, ${NW.lng()}]`)
+    console.log('NE', `[${NE.lat()}, ${NE.lng()}]`)
+    console.log('SE', `[${SE.lat()}, ${SE.lng()}]`)
+    console.log('SW', `[${SW.lat()}, ${SW.lng()}]`)
+    
   })
 
   map.data.addGeoJson(ejes)
